@@ -1,0 +1,30 @@
+<div ng-if='!ctrl.movie'>
+<h1>Loading..</h1>
+</div>
+
+
+<div id="movie-details" ng-if='ctrl.movie'>
+  <div class="row">
+    <div class='buttons'>
+      <!--TODO #4: Make this button take you back to the home page-->
+      <a class="btn btn-primary home-btn" ng-click="ctrl.toHome()">Back</a>
+      <a class="btn btn-success addmovie-btn" ng-click='ctrl.addMovie()' ng-disabled='ctrl.exists'>Add Movie</a>
+      <h1 class="text-center" ng-show='!ctrl.exists'>Found: '{{ctrl.movie.Title}}'</h1>
+      <h1 class="text-center" ng-show='ctrl.exists'>'{{ctrl.movie.Title}}' is already in the list!</h1>
+    </div>
+  </div>
+  <h3 ng-show='ctrl.movie.Response !== "True"' class="text-center">The requested movie was not found.</h3>
+  <div class="row" ng-hide='ctrl.movie.Response !== "True"'>
+    <div class="col-xs-5">
+      <img class="movie-poster" ng-src='{{ctrl.movie.Poster}}'>
+    </div>
+    <div class="col-xs-7">
+      <table class="table">
+        <tr ng-repeat="(key, value) in ctrl.movie">
+          <td> {{key}} </td><td> {{value}} </td>
+        </tr>
+      </table>
+    </div>    
+  </div>
+
+</div>

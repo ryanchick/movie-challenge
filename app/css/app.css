@@ -1,0 +1,65 @@
+.movie-list-item {
+  padding: 10px;
+  cursor: pointer;
+  position:relative;
+}
+
+.movie-list-item:hover {
+  background-color: #eee;
+}
+
+.movie-list-item .poster-container {
+  height: 200px;
+  width: 150px;
+}
+
+.movie-list-item .movie-poster {
+  max-height: 200px;
+  max-width: 150px;
+}
+
+.released-date {
+  margin-top: 20px;
+}
+
+
+
+#movie-details .movie-poster {
+  max-height: 350px;
+  max-width: 262px;
+}
+
+#movie-details .buttons {
+  text-align: center;
+}
+
+.add-btn{
+  display:inline-block;
+  float:right;
+  margin-top:-30px;
+  margin-left:5px;
+}
+
+.add-btn a{
+  color:inherit;
+}
+
+.home-btn,.addmovie-btn{
+  display:inline-block;
+  float:left;
+  margin-right:3px;
+}
+
+.form-right{
+  /*border:1px solid red;*/
+  display:inline;
+  float:right;
+  margin-top:-30px;
+}
+
+.del-btn {
+  float:right;
+  position:absolute;
+  top:5px;
+  right:5px;
+}
